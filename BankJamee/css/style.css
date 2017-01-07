@@ -1,0 +1,121 @@
+html, body{direction: rtl}
+html, body, form, fieldset, table, tr, td, img {font-family: "IRANSans";}
+input, button, select, textarea, optgroup, option {font-family: "IRANSans";}
+b, strong {font-weight: bold;}
+ul{-webkit-padding-start: 0}
+/*****************************************************************************  material rtl      */
+.input-field.col label{left: auto;right: 0.75rem}
+.row .col{float: right}
+
+
+@media only screen and (min-width: 601px){.row .col.offset-m2-custom {margin-left: auto;margin-right:12.666667%}}
+@media only screen and (min-width: 601px){.row .col.offset-m2 {margin-left: auto;margin-right:16.6666666667%}}
+@media only screen and (min-width: 601px){.row .col.offset-m3 {margin-left: auto;margin-right: 25%}}
+@media only screen and (min-width: 601px){.row .col.offset-m4 {margin-left: auto;margin-right: 33.3333333333%}}
+@media only screen and (min-width: 601px){.row .col.offset-m5 {margin-left:auto;margin-right: 41.6666666667%}}
+@media only screen and (min-width: 601px){.row .col.offset-m6 {margin-left: auto;margin-right: 50%}}
+
+
+/* input */
+.input-field .prefix ~ input, .input-field .prefix ~ textarea, .input-field .prefix ~ label, .input-field .prefix ~ .validate ~ label, .input-field .prefix ~ .autocomplete-content{margin-left:auto;margin-right:3rem}
+.input-field .prefix{margin-top:8px;}
+.input-field .prefix.active{color: #2196F3;}
+
+
+/* label underline focus color */
+.input-field input[type=text]:focus {border-bottom: 1px solid #2196F3 ;box-shadow: 0 1px 0 0 #2196F3 ;}
+
+/* label focus color */
+.input-field input[type=text]:focus + label,input:not([type]):focus:not([readonly])+label, input[type=text]:focus:not([readonly])+label
+, input[type=password]:focus:not([readonly])+label, input[type=email]:focus:not([readonly])+label, input[type=url]:focus:not([readonly])+label
+, input[type=time]:focus:not([readonly])+label, input[type=date]:focus:not([readonly])+label, input[type=datetime]:focus:not([readonly])+label
+, input[type=datetime-local]:focus:not([readonly])+label, input[type=tel]:focus:not([readonly])+label, input[type=number]:focus:not([readonly])+label
+, input[type=search]:focus:not([readonly])+label, textarea.materialize-textarea:focus:not([readonly])+label{color: #2196F3;}
+
+input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly])
+,input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly])
+,input[type=date]:focus:not([readonly]), input[type=datetime]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly])
+, input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly])
+, textarea.materialize-textarea:focus:not([readonly]){    border-bottom: 1px solid #2196F3;box-shadow: 0 1px 0 0 #2196F3;}
+
+/* table */
+table.striped>tbody>tr:nth-child(odd){background-color:inherit}
+table.striped>tbody>tr:nth-child(even){background-color:#EEEEEE}
+table.highlight>tbody>tr:hover{background-color:#E0E0E0}
+
+/* alert */
+@media only screen and (min-width: 993px) {#toast-container {right:auto;left: 7%;}}
+
+/*#toast-container {top: 55px !important;right: auto !important;left:7%;  }*/
+
+.alert {padding: 15px;margin-bottom: 20px;border: 1px solid transparent;position: relative;transition: box-shadow .25s;border-radius: 2px;}
+
+.alert-success {color: #3c763d;background-color: #dff0d8;border-color: #d6e9c6;}
+.alert-info {color: #31708f;background-color: #d9edf7;border-color: #bce8f1;}
+.alert-warning {color: #8a6d3b;background-color: #fcf8e3;border-color: #faebcc;}
+.alert-danger {color: #a94442;background-color: #f2dede;border-color: #ebccd1;}
+
+
+@media only screen and (max-width: 992px)
+{table.responsive-table thead{float: right}}
+
+th {text-align: center;background-color: #616161;color: white;border-radius:0px}
+td{text-align: right;}
+
+    
+/****************************************************************************   all page     */
+.message{margin-top:2px}
+
+
+/****************************************************************************   nav bar     */
+.brand-logo,nav ul a{color: #6d6d6d !important;}
+.brand-logo i{font-size: 4rem !important;}
+nav ul li {float: right}
+#navAvatar{float:left;width:50px;margin-top: 7px;}
+.menu{margin-bottom:20px}
+
+/*****************************************************************************  login page      */
+.login{background-color: #fff}
+.header{margin-bottom: 45px;}
+.avatar{width: 100px}
+/*.loginform > .input-field > input{margin-bottom:2px}*/
+.loginform {margin: 50px 0 35px}
+/*.btn-reg {margin-top:-25px}*/
+.loginform .input-field{text-align:right}
+
+/*****************************************************************************  reg page      */
+.reg-logo{margin-top:75px;}
+.reg-form{text-align:right}
+.reg-form .btn{margin-bottom:20px;text-align:right}
+#btnRegister{text-align:center}
+
+
+
+/*****************************************************************************  admin page      */
+.row-result{margin-top: 40px;}
+.container-result{width:95%;margin: 0 auto;margin-bottom: 60px;}
+.tbl-in-cel > tbody > tr > td{padding:5px}
+
+/*****************************************************************************  result page      */
+.collapsible-header i{float:right;margin-right: auto;margin-left: 1rem;}
+.collapsible-header img{width: 35px;margin-left: 1rem;float: right;margin-top: -0.3rem;}
+
+
+/*****************************************************************************  edit page      */
+.form-btn{margin-top:43px;}
+
+
+
+
+
+/*validate*/
+span.validate{float: right;margin-top: -19px;color: red;font-size: 12px;margin-right: 45px;margin-bottom: 15px;}
+/*tyni*/
+.mce-btn,.mce-txt,.mce-text,.mce-container-body span,.mce-tab,.mce-title,.mce-container label,.mce-container input {font-family:'IRANSans' !important}
+
+/*sample*/.div-sample{width:100%;height:100px;}
+
+
+
+          
+

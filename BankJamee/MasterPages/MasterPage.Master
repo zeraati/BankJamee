@@ -1,0 +1,58 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="BankJamee.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <!--Import Google Icon Font-->
+    <link href="../fonts/GoogleIconFont.css" rel="stylesheet" />
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../css/materialize.min.css" media="screen,projection" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />
+
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="../Scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="../Scripts/materialize.min.js"></script>
+    <script type="text/javascript" src="../Scripts/js.js"></script>
+
+
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <nav class="menu grey lighten-3">
+        <div class="row">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo"><i class="material-icons">dashboard</i></a>
+                <ul class="left hide-on-med-and-down">
+                    <li><asp:HyperLink ID="lnkAbout" runat="server" NavigateUrl="~/About.aspx"><i class="material-icons">view_quilt</i></asp:HyperLink></li>
+                    <li><asp:HyperLink ID="lnkEditPage" runat="server" NavigateUrl="~/Administrator/EditPageContent.aspx"><i class="material-icons">mode_edit</i></asp:HyperLink></li>
+                    <li><a href="#" class="navAvatar">
+                        <img id="navAvatar" class="circle responsive-img" src="../img/avatar_non.png" /></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+
+    
+
+</body>
+</html>
