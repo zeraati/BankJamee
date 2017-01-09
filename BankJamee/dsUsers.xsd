@@ -72,7 +72,7 @@
               <Mapping SourceColumn="IsUserActive" DataSetColumn="IsUserActive" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="csBankeJamee (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteUserByUserID" Modifier="Public" Name="DeleteUserByUserID" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="DeleteUserByUserID">
+              <DbSource ConnectionRef="csBankeJamee (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteUserByUserID" Modifier="Public" Name="DeleteUserByUserID" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteUserByUserID">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM [dbo].[Users] WHERE ([ID] = @UserID)</CommandText>
@@ -82,7 +82,7 @@
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="csBankeJamee (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteUserByUserName" Modifier="Public" Name="DeleteUserByUserName" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="DeleteUserByUserName">
+              <DbSource ConnectionRef="csBankeJamee (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteUserByUserName" Modifier="Public" Name="DeleteUserByUserName" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DeleteUserByUserName">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM Users
@@ -141,7 +141,7 @@ WHERE        (IsUserActive = @IsUserActive)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="csBankeJamee (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateUser" Modifier="Public" Name="UpdateUser" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="UpdateUser">
+              <DbSource ConnectionRef="csBankeJamee (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateUser" Modifier="Public" Name="UpdateUser" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="UpdateUser">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE [dbo].[Users] SET [UserName] = @UserName, [Password] = @Password, [Nam] = @Nam, [Family] = @Family, [Email] = @Email, [FullName] = @FullName, [Descrption] = @Descrption, [Mobile] = @Mobile, [IsUserActive] = @IsUserActive WHERE (([ID] = @Original_ID))</CommandText>
@@ -160,7 +160,24 @@ WHERE        (IsUserActive = @IsUserActive)</CommandText>
                   </DbCommand>
                 </UpdateCommand>
               </DbSource>
-              <DbSource ConnectionRef="csBankeJamee (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UsersCount" Modifier="Public" Name="UsersCount" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="UsersCount">
+              <DbSource ConnectionRef="csBankeJamee (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateUserByUserID" Modifier="Public" Name="UpdateUserByUserID" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="UpdateUserByUserID">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE       Users
+SET                Password = @Password, Nam = @Nam, Family = @Family, Email = @Email, Mobile = @Mobile
+WHERE        (ID = @UserID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Password" ColumnName="Password" DataSourceName="BankJamee.dbo.Users" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@Password" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="Password" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Nam" ColumnName="Nam" DataSourceName="BankJamee.dbo.Users" DataTypeServer="nvarchar(100)" DbType="String" Direction="Input" ParameterName="@Nam" Precision="0" ProviderType="NVarChar" Scale="0" Size="100" SourceColumn="Nam" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Family" ColumnName="Family" DataSourceName="BankJamee.dbo.Users" DataTypeServer="nvarchar(100)" DbType="String" Direction="Input" ParameterName="@Family" Precision="0" ProviderType="NVarChar" Scale="0" Size="100" SourceColumn="Family" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Email" ColumnName="Email" DataSourceName="BankJamee.dbo.Users" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@Email" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="Email" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Mobile" ColumnName="Mobile" DataSourceName="BankJamee.dbo.Users" DataTypeServer="varchar(11)" DbType="AnsiString" Direction="Input" ParameterName="@Mobile" Precision="0" ProviderType="VarChar" Scale="0" Size="11" SourceColumn="Mobile" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="UserID" ColumnName="ID" DataSourceName="BankJamee.dbo.Users" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@UserID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+              <DbSource ConnectionRef="csBankeJamee (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UsersCount" Modifier="Public" Name="UsersCount" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="UsersCount">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT COUNT(*)CountRecord FROM Users</CommandText>
@@ -178,7 +195,7 @@ WHERE        (IsUserActive = @IsUserActive)</CommandText>
   <xs:element name="dsUsers" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsUsers" msprop:Generator_UserDSName="dsUsers">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="dtUsers" msprop:Generator_TableClassName="dtUsersDataTable" msprop:Generator_TableVarName="tabledtUsers" msprop:Generator_RowChangedName="dtUsersRowChanged" msprop:Generator_TablePropName="dtUsers" msprop:Generator_RowDeletingName="dtUsersRowDeleting" msprop:Generator_RowChangingName="dtUsersRowChanging" msprop:Generator_RowEvHandlerName="dtUsersRowChangeEventHandler" msprop:Generator_RowDeletedName="dtUsersRowDeleted" msprop:Generator_RowClassName="dtUsersRow" msprop:Generator_UserTableName="dtUsers" msprop:Generator_RowEvArgName="dtUsersRowChangeEvent">
+        <xs:element name="dtUsers" msprop:Generator_TableClassName="dtUsersDataTable" msprop:Generator_TableVarName="tabledtUsers" msprop:Generator_TablePropName="dtUsers" msprop:Generator_RowDeletingName="dtUsersRowDeleting" msprop:Generator_RowChangingName="dtUsersRowChanging" msprop:Generator_RowEvHandlerName="dtUsersRowChangeEventHandler" msprop:Generator_RowDeletedName="dtUsersRowDeleted" msprop:Generator_UserTableName="dtUsers" msprop:Generator_RowChangedName="dtUsersRowChanged" msprop:Generator_RowEvArgName="dtUsersRowChangeEvent" msprop:Generator_RowClassName="dtUsersRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />

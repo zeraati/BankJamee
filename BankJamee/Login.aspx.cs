@@ -16,40 +16,52 @@ namespace BankJamee
 
         }
 
-        #region Alert
-        #region AlertSuccess
-        protected virtual void AlertSuccess(string oMessage)
-        {
-            Page.ClientScript.RegisterStartupScript(this.GetType(), "Alert", "AlertSuccess('" + oMessage + "');", true);
-        }
-        #endregion
 
-        #region AlertInfo
-        protected virtual void AlertInfo(string oMessage)
-        {
-            Page.ClientScript.RegisterStartupScript(this.GetType(), "Alert", "AlertInfo('" + oMessage + "');", true);
-        }
-        #endregion
-
-        #region AlertWarning
-        protected virtual void AlertWarning(string oMessage)
-        {
-            Page.ClientScript.RegisterStartupScript(this.GetType(), "Alert", "AlertWarning('" + oMessage + "');", true);
-        }
-        #endregion
-
-        #region AlertDanger
-        protected virtual void AlertDanger(string oMessage)
-        {
-            Page.ClientScript.RegisterStartupScript(this.GetType(), "Alert", "AlertDanger('" + oMessage + "');", true);
-        }
-        #endregion
-
-        #endregion
+        
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-           ds
+            if (Page.IsValid)
+            {
+                Helper clsHelper = new Helper();
+                string strAlertScript = string.Empty;
+
+                dsUsers.dtUsersDataTable dtUsers = new dsUsers.dtUsersDataTable();
+                dsUsersTableAdapters.taUsers taUsers = new dsUsersTableAdapters.taUsers();
+
+                taUsers.FillUserByUserName(dtUsers, txtUserNam.Text);
+
+                string strMessage = string.Empty;
+
+                if (dtUsers.Count != 1)
+                {
+                    strMessage = "نام کاربری با رمز عبور صحیح نیست";
+                    strAlertScript=clsHelper.Alert(4, strMessage, 3000);
+                    Page.ClientScript.RegisterStartupScript(this.GetType(), "Alert", strAlertScript, true);
+                    return;
+                }
+
+                dsUsers.dtUsersRow UserRow = dtUsers[0];
+                if (string.Compare(UserRow.Password.Trim(), txtPassword.Text.Trim(), false) != 0)
+                {
+                    strMessage = "نام کاربری با رمز عبور صحیح نیست";
+                    strAlertScript = clsHelper.Alert(4, strMessage, 3000);
+                    Page.ClientScript.RegisterStartupScript(this.GetType(), "Alert", strAlertScript, true);
+                    return;
+                }
+
+                if (UserRow.IsUserActive == false)
+                {
+                    strMessage = string.Format("کاربری گرامی {0}، شما مجوز ورود به سایت را ندارید. با بخش فنی سایت تماس بگیرید", UserRow.FullName);
+                    strAlertScript = clsHelper.Alert(3, strMessage, 3000);
+                    Page.ClientScript.RegisterStartupScript(this.GetType(), "Alert", strAlertScript, true);
+                    return;
+                }
+
+                strMessage = string.Format("{0} خوش آمدید", UserRow.FullName);
+                strAlertScript = clsHelper.Alert(1, strMessage, 3000);
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "Alert", strAlertScript, true);
+            }
         }
     }
 }

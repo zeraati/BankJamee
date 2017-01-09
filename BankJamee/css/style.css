@@ -14,6 +14,7 @@ ul{-webkit-padding-start: 0}
 @media only screen and (min-width: 601px){.row .col.offset-m4 {margin-left: auto;margin-right: 33.3333333333%}}
 @media only screen and (min-width: 601px){.row .col.offset-m5 {margin-left:auto;margin-right: 41.6666666667%}}
 @media only screen and (min-width: 601px){.row .col.offset-m6 {margin-left: auto;margin-right: 50%}}
+@media only screen and (min-width: 601px){.row .col.offset-m6-left {margin-left: 50%;}}
 
 
 /* input */
@@ -65,6 +66,7 @@ td{text-align: right;}
     
 /****************************************************************************   all page     */
 .message{margin-top:2px}
+.mrg-to{margin-top: 2rem;}
 
 
 /****************************************************************************   nav bar     */
@@ -106,7 +108,8 @@ nav ul li {float: right}
 
 
 
-
+/* input disabled */
+input:not([type]):disabled, input:not([type])[readonly="readonly"], input[type=text]:disabled, input[type=text][readonly="readonly"], input[type=password]:disabled, input[type=password][readonly="readonly"], input[type=email]:disabled, input[type=email][readonly="readonly"], input[type=url]:disabled, input[type=url][readonly="readonly"], input[type=time]:disabled, input[type=time][readonly="readonly"], input[type=date]:disabled, input[type=date][readonly="readonly"], input[type=datetime]:disabled, input[type=datetime][readonly="readonly"], input[type=datetime-local]:disabled, input[type=datetime-local][readonly="readonly"], input[type=tel]:disabled, input[type=tel][readonly="readonly"], input[type=number]:disabled, input[type=number][readonly="readonly"], input[type=search]:disabled, input[type=search][readonly="readonly"], textarea.materialize-textarea:disabled, textarea.materialize-textarea[readonly="readonly"]{color: rgba(0,0,0,0.45);}
 
 /*validate*/
 span.validate{float: right;margin-top: -19px;color: red;font-size: 12px;margin-right: 45px;margin-bottom: 15px;}

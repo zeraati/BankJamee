@@ -5,6 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+
     <!--Import Google Icon Font-->
     <link href="../fonts/GoogleIconFont.css" rel="stylesheet" />
     <!--Import materialize.css-->
@@ -16,7 +18,7 @@
     <link type="text/css" rel="stylesheet" href="../css/style.css" />
 
 
-    <!--Import jQuery before materialize.js-->
+        <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="../Scripts/jquery.min.js"></script>
     <script type="text/javascript" src="../Scripts/materialize.min.js"></script>
     <script type="text/javascript" src="../Scripts/js.js"></script>
@@ -50,9 +52,6 @@
             </asp:ContentPlaceHolder>
         </div>
     </form>
-
-
-    
-
+  
 </body>
 </html>

@@ -1,31 +1,28 @@
 ﻿
-    $(document).ready(function () {
-        $('.tooltipped').tooltip({ delay: 50 });
+$(document).ready(function () {
+    $('.tooltipped').tooltip({ delay: 50 });
 
-        $('.collapsible').collapsible();
+    $('.collapsible').collapsible();
 
-        $("#ContentPlaceHolder1_btnTest").click(function () {
-            $(".alert").hide(2000);
-        });
-
-        $("#show").click(function () {
-            $("p").show();
-        });
+    $("#ContentPlaceHolder1_btnTest").click(function () {
+        $(".alert").hide(2000);
     });
 
-    
-    function AlertSuccess($msg) {
-        Materialize.toast($msg, 2500, 'green');
-    }
+    $("#show").click(function () {
+        $("p").show();
+    });
+});
 
-    function AlertInfo($msg) {
-        Materialize.toast($msg, 2500, 'blue');
-    }
 
-    function AlertWarning($msg) {
-        Materialize.toast($msg, 2500, 'orange');
-    }
 
-    function AlertDanger($msg) {
-        Materialize.toast($msg, 2500, 'red');
+function Alert($typ, $message, $timeShow) {
+    var $color;
+    switch ($typ) {
+        case 'Success':$color = 'green';break;
+        case 'Info': $color = 'blue';break;
+        case 'Warning':; $color = 'orange';break;
+        case 'Danger':$color = 'red';break;
     }
+    Materialize.toast($message, $timeShow, $color);
+}
+
