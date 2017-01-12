@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPageJustForm.Master.cs" Inherits="BankJamee.MasterPages.MasterPageEmpty" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <link rel='shortcut icon' type='image/x-icon' href='../favicon.ico' />
+
+    <!--Import Google Icon Font-->
+    <link href="../fonts/GoogleIconFont.css" rel="stylesheet" />
+
+    <!--Import materialize.css-->
+    <link href="../css/materialize.min.css" rel="stylesheet" />
+    <link href="../css/materialize.rtl.css" rel="stylesheet" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="../css/style.css" rel="stylesheet" />
+    
+    <!--Import jQuery before materialize.js-->
+    <script src="../Scripts/jquery.min.js"></script>
+    <script src="../Scripts/materialize.min.js"></script>
+
+    <script src="../Scripts/js.js"></script>
+
+
+    <asp:ContentPlaceHolder ID="cphHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="frmContent" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="cphContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

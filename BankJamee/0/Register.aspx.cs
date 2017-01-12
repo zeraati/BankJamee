@@ -7,6 +7,8 @@ using System.Web.UI.WebControls;
 
 namespace BankJamee
 {
+
+
     public partial class Register : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
@@ -14,10 +16,10 @@ namespace BankJamee
 
         }
 
+        Helper clsHelper = new Helper();
+
         protected void btnRegister_Click(object sender, EventArgs e)
         {
-            Helper clsHelper = new Helper();
-
             if (Page.IsValid)
             {
                 string strAlertScript = string.Empty;
@@ -45,7 +47,7 @@ namespace BankJamee
                 strAlertScript = clsHelper.Alert(1, "ثبت نام شما انجام شد.");
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "Alert", strAlertScript, true);
 
-                txtUserName.Text = txtPassword.Text = txtPasswordConfirm.Text = txtEmail.Text = txtEmailConfirm.Text = string.Empty;
+                txtUserName.Text = txtPassword.Text = txtPasswordConfirm.Text = txtEmail.Text = txtEmailConfirm.Text=string.Empty;
             }
         }
 

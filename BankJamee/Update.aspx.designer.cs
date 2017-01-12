@@ -13,22 +13,13 @@ namespace BankJamee {
     public partial class Update {
         
         /// <summary>
-        /// form1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
-        /// <summary>
         /// txtUserName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUserName;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtUserName;
         
         /// <summary>
         /// txtNam control.
@@ -37,7 +28,7 @@ namespace BankJamee {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNam;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtNam;
         
         /// <summary>
         /// txtFamily control.
@@ -46,7 +37,7 @@ namespace BankJamee {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFamily;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtFamily;
         
         /// <summary>
         /// txtPassword control.
@@ -55,7 +46,7 @@ namespace BankJamee {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPassword;
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword txtPassword;
         
         /// <summary>
         /// revPassword control.
@@ -73,7 +64,7 @@ namespace BankJamee {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPasswordConfirm;
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword txtPasswordConfirm;
         
         /// <summary>
         /// rfvPasswordConfirm control.
@@ -100,7 +91,7 @@ namespace BankJamee {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmail;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtEmail;
         
         /// <summary>
         /// revEmail control.
@@ -118,7 +109,7 @@ namespace BankJamee {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmailConfirm;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtEmailConfirm;
         
         /// <summary>
         /// rfvEmailConfirm control.
@@ -145,7 +136,7 @@ namespace BankJamee {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMobile;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtMobile;
         
         /// <summary>
         /// revMobile control.

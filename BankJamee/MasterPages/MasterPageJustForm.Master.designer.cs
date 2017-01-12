@@ -7,37 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BankJamee {
+namespace BankJamee.MasterPages {
     
     
-    public partial class MasterPage {
+    public partial class MasterPageEmpty {
         
         /// <summary>
-        /// phcHead control.
+        /// cphHead control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder phcHead;
-        
-        /// <summary>
-        /// lnkAbout control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink lnkAbout;
-        
-        /// <summary>
-        /// lnkEditPage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink lnkEditPage;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphHead;
         
         /// <summary>
         /// frmContent control.
@@ -49,12 +31,12 @@ namespace BankJamee {
         protected global::System.Web.UI.HtmlControls.HtmlForm frmContent;
         
         /// <summary>
-        /// phcContent control.
+        /// cphContent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder phcContent;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphContent;
     }
 }

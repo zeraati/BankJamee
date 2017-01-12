@@ -4,13 +4,6 @@ $(document).ready(function () {
 
     $('.collapsible').collapsible();
 
-    $("#ContentPlaceHolder1_btnTest").click(function () {
-        $(".alert").hide(2000);
-    });
-
-    $("#show").click(function () {
-        $("p").show();
-    });
 });
 
 

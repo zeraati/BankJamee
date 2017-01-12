@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+//using App_Code.DAL;
 
 namespace BankJamee
 {
@@ -13,6 +15,9 @@ namespace BankJamee
         {
 
         }
+
+
+        
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
@@ -24,26 +29,26 @@ namespace BankJamee
                 dsUsers.dtUsersDataTable dtUsers = new dsUsers.dtUsersDataTable();
                 dsUsersTableAdapters.taUsers taUsers = new dsUsersTableAdapters.taUsers();
 
-                //taUsers.FillUserByUserName(dtUsers, txtUserName.Value);
+                taUsers.FillUserByUserName(dtUsers, txtUserNam.Text);
 
                 string strMessage = string.Empty;
 
                 if (dtUsers.Count != 1)
                 {
                     strMessage = "نام کاربری با رمز عبور صحیح نیست";
-                    strAlertScript = clsHelper.Alert(4, strMessage, 3000);
+                    strAlertScript=clsHelper.Alert(4, strMessage, 3000);
                     Page.ClientScript.RegisterStartupScript(this.GetType(), "Alert", strAlertScript, true);
                     return;
                 }
 
                 dsUsers.dtUsersRow UserRow = dtUsers[0];
-                //if (string.Compare(UserRow.Password.Trim(), txtPassword.Value.Trim(), false) != 0)
-                //{
-                //    strMessage = "نام کاربری با رمز عبور صحیح نیست";
-                //    strAlertScript = clsHelper.Alert(4, strMessage, 3000);
-                //    Page.ClientScript.RegisterStartupScript(this.GetType(), "Alert", strAlertScript, true);
-                //    return;
-                //}
+                if (string.Compare(UserRow.Password.Trim(), txtPassword.Text.Trim(), false) != 0)
+                {
+                    strMessage = "نام کاربری با رمز عبور صحیح نیست";
+                    strAlertScript = clsHelper.Alert(4, strMessage, 3000);
+                    Page.ClientScript.RegisterStartupScript(this.GetType(), "Alert", strAlertScript, true);
+                    return;
+                }
 
                 if (UserRow.IsUserActive == false)
                 {

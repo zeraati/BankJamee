@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace BankJamee
+namespace BankJamee.MasterPages
 {
-    public partial class Update : System.Web.UI.Page
+    public partial class MasterPageEmpty : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

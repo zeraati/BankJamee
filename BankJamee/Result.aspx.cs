@@ -13,17 +13,17 @@ namespace BankJamee
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //int STID = Int32.Parse(Request.QueryString["STID"]);
-            int STID = 66516;
+           // //int STID = Int32.Parse(Request.QueryString["STID"]);
+           // int STID = 66516;
 
-            dsStudent.dtHamsarFarzandDataTable dtHamsarFarzand = new dsStudent.dtHamsarFarzandDataTable();
-            dsStudentTableAdapters.taHamsarFarzand taHamsarFarzand = new dsStudentTableAdapters.taHamsarFarzand();
+           // //dsStudent.dtHamsarFarzandDataTable dtHamsarFarzand = new dsStudent.dtHamsarFarzandDataTable();
+           //// dsStudentTableAdapters.taHamsarFarzand taHamsarFarzand = new dsStudentTableAdapters.taHamsarFarzand();
 
-            taHamsarFarzand.FillHamsarFarzandByMKID(dtHamsarFarzand, STID);
+           // //taHamsarFarzand.FillHamsarFarzandByMKID(dtHamsarFarzand, STID);
 
 
-            string s = HtmlResult("HamsarFarzand", dtHamsarFarzand);
-            ltrResult.Text = s;
+           // //string s = HtmlResult("HamsarFarzand", dtHamsarFarzand);
+           // ltrResult.Text = s;
         }
 
         private string HtmlResult(string Title,DataTable dt)

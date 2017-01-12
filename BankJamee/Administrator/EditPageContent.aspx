@@ -1,12 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/MasterPage.Master" AutoEventWireup="true" CodeBehind="EditPageContent.aspx.cs" Inherits="BankJamee.Administrator.EditPageContent" ValidateRequest="false" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<asp:Content ID="cntHead" ContentPlaceHolderID="phcHead" runat="server">
 
     <script src="../Scripts/tinymce/tinymce.min.js"></script>
     <script src="../Scripts/tinymce/TinyConfig.js"></script>
 
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="cntContent" ContentPlaceHolderID="phcContent" runat="server">
 
 
     <div class="container">

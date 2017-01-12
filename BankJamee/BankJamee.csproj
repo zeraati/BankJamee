@@ -78,6 +78,8 @@
     <Content Include="Administrator\EditPageContent.aspx" />
     <Content Include="App_Data\PageContent\About.html" />
     <Content Include="App_Data\PageContent\Help.html" />
+    <Content Include="css\materialize.rtl.css" />
+    <Content Include="css\materialize.min.css" />
     <Content Include="css\style.css" />
     <Content Include="Images\reponsive-grid.png" />
     <Content Include="img\avatar_non.png" />
@@ -87,26 +89,29 @@
     <Content Include="img\search.png" />
     <Content Include="img\search_database.png" />
     <Content Include="img\search_people.png" />
+    <Content Include="Login.aspx" />
     <Content Include="Register.aspx" />
+    <Content Include="Scripts\jquery.min.js" />
     <Content Include="Scripts\js.js" />
+    <Content Include="Scripts\materialize.min.js" />
     <Content Include="Scripts\tinymce\langs\fa_IR.js" />
     <Content Include="Scripts\tinymce\TinyConfig.js" />
     <Content Include="Scripts\tinymce\tinymce.min.js" />
     <Content Include="packages.config" />
     <Content Include="MasterPages\MasterPage.Master" />
-    <Content Include="dsStudent.xsc">
-      <DependentUpon>dsStudent.xsd</DependentUpon>
-    </Content>
-    <None Include="dsStudent.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsStudent.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="dsStudent.xss">
-      <DependentUpon>dsStudent.xsd</DependentUpon>
-    </Content>
     <Content Include="dsUsers.xsc">
       <DependentUpon>dsUsers.xsd</DependentUpon>
+    </Content>
+    <Content Include="dsPerson.xsc">
+      <DependentUpon>dsPerson.xsd</DependentUpon>
+    </Content>
+    <None Include="dsPerson.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsPerson.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="dsPerson.xss">
+      <DependentUpon>dsPerson.xsd</DependentUpon>
     </Content>
     <None Include="dsUsers.xsd">
       <SubType>Designer</SubType>
@@ -118,6 +123,7 @@
     </Content>
     <Content Include="Update.aspx" />
     <Content Include="web.config" />
+    <Content Include="MasterPages\MasterPageJustForm.Master" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -128,7 +134,6 @@
   <ItemGroup>
     <Content Include="Admin.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="Login.aspx" />
     <Content Include="Result.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -153,12 +158,12 @@
     <Compile Include="Administrator\EditPageContent.aspx.designer.cs">
       <DependentUpon>EditPageContent.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Helper.cs" />
-    <Compile Include="dsStudent.Designer.cs">
+    <Compile Include="dsPerson.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>dsStudent.xsd</DependentUpon>
+      <DependentUpon>dsPerson.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Helper.cs" />
     <Compile Include="dsUsers.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -167,19 +172,19 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Register.aspx.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Register.aspx.designer.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\MasterPageJustForm.Master.cs">
+      <DependentUpon>MasterPageJustForm.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\MasterPageJustForm.Master.designer.cs">
+      <DependentUpon>MasterPageJustForm.Master</DependentUpon>
     </Compile>
     <Compile Include="MasterPages\MasterPage.Master.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
@@ -189,6 +194,13 @@
       <DependentUpon>MasterPage.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Result.aspx.cs">
       <DependentUpon>Result.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -1,20 +1,13 @@
-html, body{direction: rtl}
+
 html, body, form, fieldset, table, tr, td, img {font-family: "IRANSans";}
 input, button, select, textarea, optgroup, option {font-family: "IRANSans";}
 b, strong {font-weight: bold;}
 ul{-webkit-padding-start: 0}
 /*****************************************************************************  material rtl      */
-.input-field.col label{left: auto;right: 0.75rem}
-.row .col{float: right}
 
 
-@media only screen and (min-width: 601px){.row .col.offset-m2-custom {margin-left: auto;margin-right:12.666667%}}
-@media only screen and (min-width: 601px){.row .col.offset-m2 {margin-left: auto;margin-right:16.6666666667%}}
-@media only screen and (min-width: 601px){.row .col.offset-m3 {margin-left: auto;margin-right: 25%}}
-@media only screen and (min-width: 601px){.row .col.offset-m4 {margin-left: auto;margin-right: 33.3333333333%}}
-@media only screen and (min-width: 601px){.row .col.offset-m5 {margin-left:auto;margin-right: 41.6666666667%}}
-@media only screen and (min-width: 601px){.row .col.offset-m6 {margin-left: auto;margin-right: 50%}}
-@media only screen and (min-width: 601px){.row .col.offset-m6-left {margin-left: 50%;}}
+
+
 
 
 /* input */
@@ -67,7 +60,7 @@ td{text-align: right;}
 /****************************************************************************   all page     */
 .message{margin-top:2px}
 .mrg-to{margin-top: 2rem;}
-
+.mrg-btm-zro{margin-bottom:0px}
 
 /****************************************************************************   nav bar     */
 .brand-logo,nav ul a{color: #6d6d6d !important;}
@@ -77,21 +70,17 @@ nav ul li {float: right}
 .menu{margin-bottom:20px}
 
 /*****************************************************************************  login page      */
+.banner h1{font-size: 3.2rem;}
 .login{background-color: #fff}
-.header{margin-bottom: 45px;}
 .avatar{width: 100px}
-/*.loginform > .input-field > input{margin-bottom:2px}*/
 .loginform {margin: 50px 0 35px}
-/*.btn-reg {margin-top:-25px}*/
 .loginform .input-field{text-align:right}
 
 /*****************************************************************************  reg page      */
-.reg-logo{margin-top:75px;}
+.reg-logo{margin-top:45px;}
 .reg-form{text-align:right}
-.reg-form .btn{margin-bottom:20px;text-align:right}
+.reg-form .btn{margin-bottom:20px}
 #btnRegister{text-align:center}
-
-
 
 /*****************************************************************************  admin page      */
 .row-result{margin-top: 40px;}
